@@ -8,6 +8,9 @@
 #  }
 #
 class intellij($edition='community', $version='13.1.1') {
+  file { "/Applications/IntelliJ\ IDEA\ 13.app/build.txt":
+    ensure => 'absent',
+  }
 
   case $edition {
     'community': {
